@@ -8,14 +8,17 @@
 	<packaging>war</packaging>
 	<name>TestJSF</name>
 	<description>Test de JSF</description>
-	
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
-				<configuration></configuration>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
@@ -27,7 +30,7 @@
 		</plugins>
 		<finalName>${project.name}</finalName>
 	</build>
-	
+
 	<properties>
 		<!-- Generic properties -->
 		<java.version>1.8</java.version>
@@ -81,7 +84,7 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
-		<!-- Hibernate -->
+		<!-- Hibernate 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -101,7 +104,7 @@
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
-		</dependency>
+		</dependency> -->
 		<!-- JSF Dependencies -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -156,10 +159,10 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
 		<dependency>
-		    <groupId>org.primefaces</groupId>
-		    <artifactId>primefaces</artifactId>
-		    <version>5.3</version>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.2</version>
 		</dependency>
 	</dependencies>
-	
+
 </project>
